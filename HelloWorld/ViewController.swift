@@ -10,10 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var clickMeButton: UIButton!
+    
+    
+    @IBAction func buttonPressed(sender: AnyObject) {
+        textLabel.textColor = UIColor.orangeColor()
+        textLabel.text = "Hello World!"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        clickMeButton.layer.cornerRadius = 6.0
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
